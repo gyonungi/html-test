@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="all" href="/css/index.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<title>CoDe School</title>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<style>
+	.card-holder__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card-holder__header h1 {
+		font-family: Gilroy;
+		font-size: 46px;
+		font-weight: 600;
+		line-height: 46px;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		width: 598px;
+		color: rgba(34, 37, 59, 1);
+	}
+
+	.footers__info {
+		display: flex;
+		flex-wrap: nowrap;
+		align-content: center;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.map {
+		border-radius: 15px;
+
+		overflow: hidden;
+		margin-bottom: 55px;
+	}
+
+	.menu {
+		display: none;
+	}
+</style>
+
+<body>
+	<div class='container'>
+		<nav>
+			<div class='head-nav__pc'>
+				<ul class='head-nav'>
+					<p class="colorful-text">
+						<span class="uppercase">C</span>
+						<span class="lowercase">o</span>
+						<span class="uppercase">D</span>
+						<span class="lowercase">e</span>
+					</p>
+					<li class='head-nav__title'>Чему вы научитесь</li>
+					<li class='head-nav__title'>Процесс обучения</li>
+					<li class='head-nav__title'>Стоимость</li>
+					<li class='head-nav__title'>Контакты</li>
+					<div>
+
+						<a href="tel:+74993489396" class='head-nav__phone'>+7 (499) 348 93 96</a>
+
+					</div>
+				</ul>
+				<ul class="menu">
+					<li>Чему вы научитесь</li>
+					<li> Процесс обучения </li>
+					<li>Стоимость</li>
+					<li>Контакты</li>
+					<li>Регистрация</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="swiper mySwiper">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<div class='bg-oneImage '>
+						<div class='bg-oneImage__info'>
+							<h2>
+								Школа {программирования}для тех, кому нужны реальные навыки,
+								а не просто сертификат
+							</h2>
+							<hr>
+							<p> Закажите звонок, и наш специалист свяжется с вами в ближайшее время</p>
+							<button class='bg-oneImage__button' id="myBtn"> <span>Заказать звонок</span> <img
+									src='/image/Arrow 1.png'></button>
+						</div>
+
+						<div><img class='bg-oneImage__image' src='/image/macb.png' alt='Ноутбук'></div>
+					</div>
+
+				</div>
+
+				<div class="swiper-slide">
+					<div class='bg-oneImage '>
+						<div class='bg-oneImage__info'>
+							<h2>
+								Обучение
+								через практику
+							</h2>
+							<hr>
+							<p> Всё, что вы узнали, вы тут же начинаете применять на практике. Вы сразу видите результаты своего
+								труда.</p>
+							<button class='bg-oneImage__button' id="myBtn"> <span>Заказать звонок</span> <img
+									src='/image/Arrow 1.png'></button>
+						</div>
+
+						<div><img class='bg-oneImage__image' src='/image/bgchel.png' alt='Ноутбук'></div>
+					</div>
+
+				</div>
+			</div>
+			<!-- 	<div class="swiper-slide">
+				<div class='bg-oneImage '>
+					<div class='bg-oneImage__info'>
+						<h2>
+							Весь материал разбит на небольшие уроки
+						</h2>
+						<hr>
+						<p> Теория и практика подаются маленькими порциями. Так вам будет легче усваивать новые знания.</p>
+						<button class='bg-oneImage__button'> <span>Заказать звонок</span> <img src='/image/Arrow 1.png'></button>
+					</div>
+
+					<div><img class='bg-oneImage__image' src='/image/bgcheldev.png' alt='Ноутбук'></div>
+				</div>
+			</div> -->
+			...
+		</div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2>Заказать звонок</h2>
+				</div>
+				<div class="modal-body">
+					<p>
+						<label class="text-field__label">Имя</label>
+						<input class="text-field__input" name="first" type="text" placeholder='ваше  имя'>
+					</p>
+					<p>
+						<label class="text-field__label">Телефон</label>
+						<input class="text-field__input" name="first" type="number" placeholder='+7 ХХХ - ХХХ - ХХ -ХХ'>
+					</p>
+					<p>
+						<label class="text-field__label">Email</label>
+						<input class="text-field__input" name="first" type="email" placeholder='mail@site.com'>
+					</p>
+					<p><label for="w3review">Сообщение</label></p>
+					<textarea id="w3review" name="w3review" rows="4" cols="50">Ваше сообщение ...</textarea>
+					<b>Нажимая кнопку “Отправить”, соглашаюсь с политикой конфидениальности</b>
+				</div>
+				<div class="modal-footer">
+					<button class='bg-oneImage__button'> <span>Отправить</span> <img src='/image/Arrow 1.png'></button>
+				</div>
+			</div>
+
+		</div>
+		<div class='card-holder__header '>
+			<h1>
+				Обучение в CoDe – это удобно и результативно
+			</h1>
+		</div>
+
+		<div class="card-holder  top-cards">
+			<div class="card">
+				<img src="./image/code.jpg" alt="code">
+				<h4>Огромное количество практики</h4>
+				<p>Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
+			</div>
+			<div class="card">
+				<img src="./image/orb.jpg" alt="code">
+				<h4>Современные методики обучения</h4>
+				<p>Спиральное обучение:
+					погружаемся в материал постепенно, виток за витком</p>
+			</div>
+			<div class="card">
+				<img src="./image/pc.jpg" alt="code">
+				<h4>Простое и понятное изложение</h4>
+				<p>Вместо заумных терминов – примеры из реального мира</p>
+			</div>
+			<div class="card">
+				<img src="./image/calen.jpg" alt="code">
+				<h4>Гибкий график занятий</h4>
+				<p>Учитесь в любое время в удобном
+					для вас темпе</p>
+			</div>
+		</div>
+		<div class="card-holder bottom-cards">
+			<div class="card">
+				<img src="./image/text.jpg" alt="code">
+				<h4>Прямая связь с опытными программистами</h4>
+				<p>Задавайте вопросы
+					и отправляйте свой код на проверку</p>
+			</div>
+
+			<div class="card">
+				<img src="./image/rubl.jpg" alt="code">
+				<h4>Оплата небольшими частями</h4>
+				<p>Платите только за тот материал, который сейчас изучаете,
+					а не за весь курс сразу</p>
+			</div>
+			<div class="card">
+				<img src="./image/phone.jpg" alt="code">
+				<h4>Быстрый и легкий возврат</h4>
+				<p>Если передумаете учиться –
+					вернем деньги за 3 рабочих дня</p>
+			</div>
+		</div>
+
+		<div class='help'>
+			<img class='help__img' src='./image/cheli.png' alt='#'>
+			<div class='help__card'>
+				<h3>Помощь и поддержка</h3>
+				<p>Если в процессе обучения возникнут сложности, вы всегда сможете задать вопрос своему наставнику.</p>
+				<p>Раз в несколько уроков вы будете получать большое задание, которое нужно будет сдавать на проверку
+					код-ревьюеру. Он внимательно изучит ваш код, найдет ошибки и поможет вам стать луч ше. </p>
+			</div>
+		</div>
+
+		<div class='help'>
+			<div class='help__card'>
+				<h3>Методика обучения</h3>
+				<p>Весь учебный материал структурирован по принципу «спирального обучения». Сначала вы получаете базовые знания,
+					а затем на каждом витке спирали углубляетесь в изученные темы, доводя их понимание до совершенства. Такой
+					подход упрощает обучение и гарантирует, что вы не пропустите ничего важного.</p>
+
+			</div>
+			<img class='help__img' src='./image/devchel.png' alt='#'>
+		</div>
+
+		<div class='info_position'>
+			<img class='info__card' src='./image/devahi.png' alt='#'>
+			<div class='info_positions'>
+				<a href="image_1.jpg" data-fancybox="gallery" data-caption="Caption #1">
+					<img class='info__cards' src='./image/code.jpg' alt='#'>
+				</a>
+				<a href="image_2.jpg" data-fancybox="gallery" data-caption="Caption #2">
+					<img class='info__cards' src='./image/notebook.png' alt='#'>
+				</a>
+				<a href="image_3.jpg" data-fancybox="gallery" data-caption="Caption #3">
+					<img class='info__cards' src='./image/notebook.png' alt='#'>
+				</a>
+				<a href="image_4.jpg" data-fancybox="gallery" data-caption="Caption #4">
+					<img class='info__cards' src='./image/child.png' alt='#'>
+				</a>
+			</div>
+		</div>
+		<div id='map' class='map'>
+			<script type="text/javascript" charset="utf-8" async
+				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8be345c110971359e30a8c5acf0dfdd0f797eb000aa5df189da53dda1d852f75&amp;width=1160&amp;height=423&amp;lang=ru_RU&amp;scroll=true"></script>
+		</div>
+		<footer>
+			<div class='footers__info'>
+				<div>
+					<h2>Code Школа программирования</h2>
+					<div>
+						<img src='/image/Group 9.png'>
+						<img src='/image/Group 1190.png'>
+						<img src='/image/Group 1191.png'>
+						<img src='/image/Group 1192.png'>
+					</div>
+				</div>
+				<div class='footer__info__text'>
+					<p>Чему вы научитесь</p>
+					<p>Процесс обучения</p>
+					<p>Стоимость</p>
+					<p>Контакты</p>
+					<p>Регистрация</p>
+				</div>
+				<div class='footer__info__phone'>
+					<a href="tel:+74993489396" class='head-nav__phone'>+7 (499) 348 93 96</a>
+					<p>info@code.ru</p>
+
+				</div>
+			</div>
+			<hr>
+			<div class='footer_title'>
+				<p>© 2023 — Все права защищены</p>
+				<p>Пользовательское соглашение</p>
+				<p>Политика конфиденциальности</p>
+			</div>
+
+		</footer>
+	</div>
+	</div>
+	</div>
+
+</body>
+<script>
+	var swiper = new Swiper('.mySwiper', {
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		mousewheel: true,
+		keyboard: true,
+	})
+
+	var modal = document.getElementById("myModal")
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn")
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0]
+
+	// When the user clicks the button, open the modal 
+	btn.onclick = function () {
+		modal.style.display = "block"
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function () {
+		modal.style.display = "none"
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = "none"
+		}
+	}
+	Fancybox.bind("[data-fancybox]", {
+		// Your custom options
+	});
+</script>
+
+</html>
